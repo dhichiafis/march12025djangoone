@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen bg-slate-200 text-white">
+    <nav class="flex flex-row px-6 py-9 justify-between bg-teal-800">
+        <div>
+            <a href="{% url 'home' %} ">home</a>
+        </div>
+        <div class="flex justify-between gap-x-4">
+            <a href="{% url 'about' %}"
+            class="rounded-md bg-teal-950 px-4 py-2"
+            >about</a>
+            <a class="rounded-md bg-teal-950 px-4 py-2"
+            href="{% url 'skills' %}">skills</a>
+        </div>
+    </nav>
+    <main class="px-6 py-6 text-gray-950">
+        {% block content %}
+        {% endblock %}
+    </main>
+  </body>
+</html>
